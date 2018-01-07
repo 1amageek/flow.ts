@@ -1,5 +1,3 @@
-import { Promise } from 'es6-promise';
-
 export interface Dependency {
 
 }
@@ -37,17 +35,14 @@ export class Line<T extends Dependency> {
     }
 
     async run(dependency: T) {
-        var result
-        for (let i=0; i<this.steps.length; i++) {
-            let step = this.steps[i]
+        for (const step of this.steps) {
             try {                
-                result = await step.execute(dependency)
+                await step.execute(dependency)
             } catch(error) {
                 step.error = error
                 this.error = error
                 throw(error)
             }
         }
-        return result
     }
 }
