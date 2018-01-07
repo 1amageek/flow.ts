@@ -1,5 +1,7 @@
 # flow.ts
 
+Flow enables coding of structured scripts.
+
 # Installation
 
 ```shell
