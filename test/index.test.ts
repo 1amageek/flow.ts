@@ -26,7 +26,7 @@ describe("Flow success test", () => {
         return item
     })
 
-    const flow: Flow.Flow<Item> = new Flow.Flow([step0, step1, step2])
+    const flow: Flow.Line<Item> = new Flow.Line([step0, step1, step2])
 
     var item: Item = new Item()
 
@@ -82,7 +82,7 @@ describe("Flow failure test", () => {
         return item
     })
 
-    const flow: Flow.Flow<Item> = new Flow.Flow([step0, step1, step2])
+    const flow: Flow.Line<Item> = new Flow.Line([step0, step1, step2])
 
     var item: Item = new Item()
 

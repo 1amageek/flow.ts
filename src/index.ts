@@ -26,7 +26,7 @@ export class Step<T extends Dependency> implements Processable<T> {
     }
 }
 
-export class Flow<T extends Dependency> {
+export class Line<T extends Dependency> {
 
     steps: Step<T>[] = []
 
