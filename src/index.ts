@@ -12,9 +12,9 @@ export class Step<T extends Dependency> implements Processable<T> {
 
     error?: Error
 
-    script: (T) => Promise<T>
+    script: (arg: T) => Promise<T> | T
 
-    constructor(script: (T) => Promise<T>) {
+    constructor(script: (arg: T) => Promise<T> | T) {
         this.script = script
     }
 
