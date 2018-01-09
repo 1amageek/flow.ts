@@ -10,6 +10,7 @@ playground.js
 *.json
 !tsconfig.json
 !package.json
+!tslint.json
 # Runtime data
 pids
 *.pid
