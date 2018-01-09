@@ -1,0 +1,67 @@
+{
+  "name": "@1amageek/flow",
+  "version": "0.1.1",
+  "description": "Flow enables coding of structured scripts.",
+  "main": "./lib/index.js",
+  "types": "./types/index.d.ts",
+  "scripts": {
+    "build": "./node_modules/.bin/tslint -p tslint.json && tsc --outDir lib ./src/index.ts -d && mv ./lib/index.d.ts ./types/index.d.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "npm run build && firebase serve --only functions",
+    "shell": "npm run build && firebase experimental:functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1amageek/flow.ts.git"
+  },
+  "keywords": [
+    "flow",
+    "error",
+    "typescript"
+  ],
+  "author": "1amageek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1amageek/flow.ts/issues"
+  },
+  "files": [
+    "lib",
+    "types"
+  ],
+  "homepage": "https://github.com/1amageek/flow.ts#readme",
+  "dependencies": {
+    "reflect-metadata": "^0.1.10"
+  },
+  "contributors": [
+    {
+      "name": "Norikazu Muramoto",
+      "email": "tmy0x3@icloud.com"
+    }
+  ],
+  "devDependencies": {
+    "@types/es6-promise": "0.0.33",
+    "@types/jest": "^21.1.9",
+    "@types/node": "^8.5.2",
+    "jest": "^22.0.3",
+    "ts-jest": "^22.0.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
