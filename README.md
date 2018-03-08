@@ -5,7 +5,7 @@ Flow enables coding of structured scripts.
 # Installation
 
 ```shell
-yarn add @1amageek/flow
+npm add @1amageek/flow
 ```
 
 # Usage
